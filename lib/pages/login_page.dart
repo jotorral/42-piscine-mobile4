@@ -14,6 +14,7 @@ class Login extends StatelessWidget {
 			child: Column(
 				mainAxisAlignment: MainAxisAlignment.center,
 				children: [
+            Text('Pág.1 - User: ${userName ?? ''}', textAlign: TextAlign.center, style: const TextStyle(fontFamily: 'DancingScript',fontSize: 24, color: Colors.black),),
 						const GoogleAuthen(),
 
 /*					ElevatedButton(						

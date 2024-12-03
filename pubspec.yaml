@@ -38,7 +38,7 @@ dependencies:
   firebase_auth: ^5.3.3 # La versión 5.3.3 requiere minSdkVerion 23. Por lo que la bajamos a 4.16.0 para que use la 21
   firebase_core: ^3.8.0  # La versión 3.8.0 requiere firebase_auth 5.3.3. Por lo que la bajamos a 2.32.0.
   flutter_signin_button: ^2.0.0
-  github_sign_in: ^0.0.5-dev.4
+#  github_sign_in: ^0.0.5-dev.4
 #  cloud_firestore: ^4.15.0
 
 dev_dependencies:
