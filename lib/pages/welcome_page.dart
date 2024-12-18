@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piscine_mobile_4/main.dart';
+import 'logout_button.dart';
+import '../authentications/google_authen.dart';
 
 // Pantalla 0 - WELCOME
 class Welcome extends StatelessWidget {
@@ -30,8 +32,20 @@ class Welcome extends StatelessWidget {
                       .cambiarPantalla(1);
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-                child: const Text('Login', style:TextStyle(fontFamily: 'DancingScript', color: Colors.white, fontSize: 22)),
+                child: Text('     Login ${firebaseAuth.currentUser?.displayName}     ', style:const TextStyle(fontFamily: 'DancingScript', color: Colors.white, fontSize: 22)),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  // Llamamos al callback para cambiar a Pantalla 1
+                  (context.findAncestorStateOfType<PantallaPrincipalState>()!)
+                      .cambiarPantalla(1);
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+                child: const Text('Login Auth0', style:TextStyle(fontFamily: 'DancingScript', color: Colors.white, fontSize: 22)),
+              ),
+              firebaseAuth.currentUser != null
+                ? const LogoutButton()
+                : const SizedBox.shrink(),
             ]
           ),
         )

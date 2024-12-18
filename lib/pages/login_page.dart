@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:piscine_mobile_4/main.dart';
 import 'package:piscine_mobile_4/authentications/google_authen.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 
 // Pantalla 1 - LOGIN
 class Login extends StatelessWidget {
 	const Login({super.key});
-
 
 	@override
 	Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class Login extends StatelessWidget {
 			child: Column(
 				mainAxisAlignment: MainAxisAlignment.center,
 				children: [
-            Text('Pág.1 - User: ${userName ?? ''}', textAlign: TextAlign.center, style: const TextStyle(fontFamily: 'DancingScript',fontSize: 24, color: Colors.black),),
+            Text('Pág.1 - User: ${FirebaseAuth.instance.currentUser?.displayName ?? ''}', textAlign: TextAlign.center, style: const TextStyle(fontFamily: 'DancingScript',fontSize: 24, color: Colors.black),),
 						const GoogleAuthen(),
 
 /*					ElevatedButton(						

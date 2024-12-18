@@ -29,3 +29,20 @@ Pinchar arriba en un sitio con 3 puntos gordos para seleccionar el proyecto que 
 A la derecha de la casilla con los 3 puntos está buscar. Escribir en buscar oauth. Seleccionar API Pantalla de consentimiento de OAuth. Seleccionar Usuarios Externos y Crear
 Poner nombre de la aplicación que se mostrará en la pantalla del móvil para indicar que quieres acceder, poner le email y si quieres un logo que saldrá en la pantalla del móvil, y el email del desarrolador. Guardar y continuar.
 
+
+***********************************************************
+****************   AUTENTICAR CON AUTH0   *****************
+***********************************************************
+
+Ir a la web pub.dev para descargar:
+http -                      incluirlo en dev_dependencies: flutter_test: de pubspec.yaml
+flutter_appauth -           incluirlo en dev_dependencies: flutter_test: de pubspec.yaml
+flutter_secure_storage -    incluirlo en dev_dependencies: flutter_test: de pubspec.yaml
+
+En android/app/build.gradle poner en defaultConfig minSdkVersion 18
+En android/app/build.gradle en defaultConfig abajo del todo poner
+    manifestPlaceholders = [
+        'appAthRedirectScheme': 'com.ath0.flutterdemo'
+    ]
+
+Ejecutar flutter run

@@ -40,13 +40,23 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
+/*  static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyDE2q8p1loatHcLUbS-9y9i6I3evVsHEk8',
     appId: '1:621645718668:web:e01b32f08815cd95cac7a9',
     messagingSenderId: '621645718668',
     projectId: 'piscinamobile4',
     authDomain: 'piscinamobile4.firebaseapp.com',
     storageBucket: 'piscinamobile4.firebasestorage.app',
+  );
+*/
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: "AIzaSyAM7kQw-EHOTAPx_uUsYP7vWF8FrwYAlpw",
+    authDomain: "piscinamobile4.firebaseapp.com",
+    projectId: "piscinamobile4",
+    storageBucket: "piscinamobile4.firebasestorage.app",
+    messagingSenderId: "621645718668",
+    appId: "1:621645718668:web:3e6bae3421731ef4cac7a9"
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -63,6 +73,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '621645718668',
     projectId: 'piscinamobile4',
     storageBucket: 'piscinamobile4.firebasestorage.app',
+    androidClientId: '621645718668-k4r0e7uol4q28qlhnrph22eufv8mvvgv.apps.googleusercontent.com',
+    iosClientId: '621645718668-1cf2fpa0e79cbbvuf7acc3269vo1mn6h.apps.googleusercontent.com',
     iosBundleId: 'com.example.piscineMobile4',
   );
 
@@ -72,6 +84,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '621645718668',
     projectId: 'piscinamobile4',
     storageBucket: 'piscinamobile4.firebasestorage.app',
+    androidClientId: '621645718668-k4r0e7uol4q28qlhnrph22eufv8mvvgv.apps.googleusercontent.com',
+    iosClientId: '621645718668-1cf2fpa0e79cbbvuf7acc3269vo1mn6h.apps.googleusercontent.com',
     iosBundleId: 'com.example.piscineMobile4',
   );
 
